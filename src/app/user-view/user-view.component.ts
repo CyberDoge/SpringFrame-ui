@@ -13,9 +13,9 @@ export class UserViewComponent implements OnInit {
   constructor(private userService: UserService,
     private route: ActivatedRoute) {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    console.log(id);
     this.userService.getUser(id).subscribe(function (value: User) {
       this.user = value;
+      console.log(this.user);
     });
   }
 

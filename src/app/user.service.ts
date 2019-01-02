@@ -10,7 +10,7 @@ export class UserService {
   constructor(private httpClient: HttpClient) { }
 
   public getUser(id: number): Observable<User> {
-    return this.httpClient.get<User>('api/user/' + id);
+    return this.httpClient.get<User>('api/users/' + id);
   }
   public getUsers(): Observable<User[]> {
     return this.httpClient.get<User[]>('api/users');
